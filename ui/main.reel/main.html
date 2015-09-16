@@ -53,11 +53,19 @@
                 "contentController": {"@": "rangeController"},
                 "contenteditable": "true",
                 "dir": "ltr",
-                "draggable": "true"
+                "draggable": "true",
+                "formenctype": "application/x-www-form-urlencoded",
+                "formmethod": "get",
+                "type": "button"
             }
         },
         "rangeController": {
-            "prototype": "montage/core/range-controller"
+            "prototype": "montage/core/range-controller",
+            "properties": {
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true"
+            }
         },
         "task": {
             "prototype": "ui/task.reel",
@@ -65,7 +73,10 @@
                 "element": {"#": "task"},
                 "contenteditable": "true",
                 "dir": "ltr",
-                "draggable": "true"
+                "draggable": "true",
+                "formenctype": "application/x-www-form-urlencoded",
+                "formmethod": "get",
+                "type": "button"
             },
             "bindings": {
                 "task": {"<-": "@list:iteration.object"}
